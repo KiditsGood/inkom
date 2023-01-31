@@ -1,0 +1,69 @@
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  border-bottom: 1px solid #D4D4D4;
+  padding: 16px 0;
+
+  .container{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+      width: 95px;
+      height: 49px;
+
+      &__icon{
+        width: 95px;
+        height: 49px;
+      }
+    }
+
+    .search{
+      width: 100%;
+      max-width: 368px;
+      outline: 1px solid $neutral30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 16px;
+      box-sizing: border-box;
+
+      &__input{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 13px 16px;
+      }
+
+      &__button{
+        svg{
+          width: 24px;
+          height: 24px;
+          fill: none;
+          stroke: $neutral60;
+        }
+      }
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      gap: 26px;
+
+      &__item{
+        font-size: 15px;
+        line-height: 18px;
+
+        &:hover{
+          color: $primary40;
+        }
+      }
+    }
+
+  }
+}
