@@ -1,0 +1,25 @@
+block config
+
+include ../_includes/mixins/svgsprite
+
+doctype html
+html(lang="en")
+  head
+    include ../_includes/head
+    block head
+
+  body.body(class=bodyClass)
+    block header
+      include ../_includes/blocks/header
+
+    .content
+      block content
+
+    block footer
+      include ../_includes/blocks/footer
+
+    .hidden
+      // include popups here
+
+    script(src=require('../../js/app.js'))
+    script(src=require('../../js/svgsprite.js'))
