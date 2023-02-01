@@ -7,6 +7,19 @@
 @import "layout";
 @import "buttons";
 
-//Components
+//Sections
 
 @import "./src/components/header/header";
+@import "./src/components/footer/footer";
+@import "./src/components/sections/main/main";
+@import "./src/components/sections/bearings/bearings";
+@import "./src/components/sections/about/about";
+@import "./src/components/sections/events/events";
+
+//Bem-blocks
+
+@import "./src/components/bem-blocks/minicatalog/minicatalog";
+@import "./src/components/bem-blocks/pluses/pluses";
+@import "./src/components/bem-blocks/types/types";
+@import "./src/components/bem-blocks/news/news";
+@import "./src/components/bem-blocks/intrid/intrid";

@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 @@include('components/head/_head.html',{
 "lang":"en",
-"title":"Easy-webdev-startpack v3.0",
-"description":"Gulp pack for easy html/php markup development",
-"keywords":"",
-"favicon":"img/favicons/favicon",
+"title":"Инком",
+"description":"Инком",
+"keywords":"Инком",
+"favicon":"img/favicon",
 })
 
 <body>
 	@@include('components/header/_header.html')
-	<main class="wrapper"></main>
+	<main class="wrapper">
+		@@include('components/sections/main/_main.html')
+		@@include('components/sections/bearings/_bearings.html')
+		@@include('components/sections/about/_about.html')
+		@@include('components/sections/events/_events.html')
+	</main>
 	@@include('components/footer/_footer.html')
 	@@include('components/bodyscripts/_scripts.html')
 </body>

@@ -1,0 +1,57 @@
+.intrid{
+  font-size: 10pt;
+  font-family: Arial;
+  line-height: 20px;
+  color: white;
+  background: $primary60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 9px 0 4px;
+  height: 24px;
+  gap: 5px;
+  border-radius: 20px;
+  border: 1px solid $primary60;
+
+  &:hover{
+    background: white;
+    color: $primary60;
+
+    & span{
+      color: $primary60;
+    }
+
+    & .intrid__circle{
+      background: $primary60;
+
+      &-in{
+        background: white;
+      }
+    }
+  }
+
+  &__fat{
+    font-weight: 700;
+    color: white;
+    font-family: Arial;
+  }
+
+  &__circle{
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+
+    &-in{
+      width: 6px;
+      height: 6px;
+      border-radius: 100px;
+      background: $primary60;
+      transition: 0.2s;
+    }
+  }
+}
