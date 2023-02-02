@@ -2,13 +2,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
   max-width: 1440px;
   margin: 0 auto;
+
+  @include media-xxl{
+    max-width: calc(100% - 40px);
+  }
+
+  @include media-sm{
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+  }
 
   &__image{
     max-width: 786px;
     width: 100%;
+
+    @include media-xxl{
+      min-width: 550px;
+    }
+
+    @include media-sm{
+      min-width: 360px;
+      min-height: 368px;
+      max-width: 550px;
+      object-fit: cover;
+    }
   }
 
   &__text{
@@ -17,8 +38,16 @@
     gap: 16px;
     max-width: 582px;
 
+    @include media-sm{
+      padding: 0 16px;
+    }
+
     &-title{
       position: relative;
+
+      @include media-sm{
+        padding-left: 16px;
+      }
 
       &:before{
         content: '';
@@ -29,6 +58,10 @@
         top: 0;
         left: -11px;
         z-index: -1;
+
+        @include media-sm{
+          left: 5px;
+        }
       }
     }
 

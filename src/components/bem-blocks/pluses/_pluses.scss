@@ -4,6 +4,15 @@
   justify-content: space-between;
   gap: 32px;
 
+  @include media-xxl{
+    max-width: calc(100% - 40px);
+    margin: auto;
+  }
+
+  @include media-sm{
+    display: none;
+  }
+
   &__item{
     display: flex;
     align-items: center;

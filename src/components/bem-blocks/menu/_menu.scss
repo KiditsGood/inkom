@@ -1,0 +1,44 @@
+.menu{
+  padding: 16px;
+  box-sizing: border-box;
+  background: $primary5;
+  border-top: 1px solid $neutral5;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    width: 88px;
+    font-size: 10px;
+    line-height: 10px;
+
+    &.active{
+      color: $neutral80;
+
+      svg{
+        stroke: $neutral80;
+      }
+    }
+
+    svg{
+      width: 24px;
+      height: 24px;
+      fill: $neutral60;
+      stroke: none;
+      transition: 0.2s;
+    }
+
+    &:nth-child(2) svg{
+      stroke: $neutral60;
+      fill: none;
+    }
+  }
+}

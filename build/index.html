@@ -14,37 +14,80 @@
 
 
 <body>
-	<header class="header">
+<header class="header">
     <div class="container">
         <a href="/" class="logo">
             <img src="/img/logo.webp" alt="" class="logo__icon">
         </a>
-        <div class="search">
-            <input type="text" class="search__input" placeholder="Я ищу">
-            <button class="search__button">
-                <svg>
-                    <use xlink:href="/img/sprite.svg#search"></use>
-                </svg>
-            </button>
-        </div>
+<!--        <div class="search">-->
+<!--            <input type="text" class="search__input" placeholder="Я ищу">-->
+<!--            <button class="search__button">-->
+<!--                <svg>-->
+<!--                    <use xlink:href="/img/sprite.svg#search"></use>-->
+<!--                </svg>-->
+<!--            </button>-->
+<!--        </div>-->
         <nav class="nav">
+            <div class="sub__head">
+                <svg class="sub__head-icon">
+                    <use xlink:href="/img/sprite.svg#catalog"></use>
+                </svg>
+                <p class="sub__head-name">Каталог</p>
+            </div>
             <a href="/" class="nav__item">Бренды</a>
             <a href="/" class="nav__item">Оптовым покупателям</a>
             <a href="/" class="nav__item">События</a>
             <a href="/" class="nav__item">Фотогалерея</a>
             <a href="/" class="nav__item">О компании</a>
             <a href="/" class="nav__item">Контакты</a>
+            <div class="contacts">
+                <a href="tel: +7 789 456 325 89" class="contacts__item">
+                    <svg class="contacts__item-icon">
+                        <use xlink:href="/img/sprite.svg#phone"></use>
+                    </svg>
+                    +7 789 456 325 89
+                </a>
+                <a href="mailto: info@gmail.com" class="contacts__item">
+                    <svg class="contacts__item-icon">
+                        <use xlink:href="/img/sprite.svg#mail"></use>
+                    </svg>
+                    info@gmail.com
+                </a>
+            </div>
+            <div class="socials">
+                <a href="" class="socials__item vk">
+                    <svg class="socials__item-icon">
+                        <use xlink:href="/img/sprite.svg#vk"></use>
+                    </svg>
+                </a>
+                <a href="" class="socials__item wa">
+                    <svg class="socials__item-icon">
+                        <use xlink:href="/img/sprite.svg#wa"></use>
+                    </svg>
+                </a>
+                <a href="" class="socials__item telegram">
+                    <svg class="socials__item-icon">
+                        <use xlink:href="/img/sprite.svg#telegram"></use>
+                    </svg>
+                </a>
+            </div>
         </nav>
-        <a href="tel: +7 789 456 325 89" class="button button--light phone">
+        <a href="tel: +7 789 456 32 89" class="button button--light phone">
             <svg>
                 <use xlink:href="/img/sprite.svg#phone"></use>
             </svg>
-            Звонок
+            +7 789 456 32 89
         </a>
+        <div class="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
     </div>
 </header>
-	<main class="wrapper">
-		<section class="main">
+<main class="wrapper">
+	<section class="main">
     <div class="main__top">
         <div class="sub">
     <div class="sub__head">
@@ -63,6 +106,27 @@
         <a href="/" class="sub__list-item">Подшипники для редуктора</a>
         <a href="/" class="sub__list-item">Подшипники для редуктора</a>
         <a href="/" class="sub__list-item">Упорные подшипники</a>
+    </div>
+    <div class="sub__hidden">
+        <a href="/" class="sub__list-item">Подшипники генератора</a>
+        <a href="/" class="sub__list-item">Подшипники skif</a>
+        <a href="/" class="sub__list-item">Шариковые подшипники</a>
+        <a href="/" class="sub__list-item">Подшипники качения</a>
+        <a href="/" class="sub__list-item">Подшипники скольжения</a>
+        <a href="/" class="sub__list-item">Подшипники для редуктора</a>
+        <a href="/" class="sub__list-item">Подшипники для редуктора</a>
+        <a href="/" class="sub__list-item">Подшипники для редуктора</a>
+        <a href="/" class="sub__list-item">Упорные подшипники</a>
+        <button class="sub__hidden-open">
+            <svg>
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+            </svg>
+            <span class="first">Смотреть все</span>
+            <span class="second">Скрыть</span>
+            <svg>
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+            </svg>
+        </button>
     </div>
 </div>
         <img src="/img/main.webp" alt="" class="main__top-image">
@@ -94,7 +158,7 @@
     </div>
 </div>
 </section>
-		<section class="bearings">
+	<section class="bearings">
     <h1 class="bearings__title">Подшипники любой сложности</h1>
     <div class="types">
     <a href="/" class="types__item">
@@ -147,14 +211,14 @@
     </a>
 </div>
 </section>
-		<section class="about">
+	<section class="about">
     <img src="/img/about.webp" alt="" class="about__image">
     <div class="about__text">
         <h2 class="about__text-title">О нас</h2>
         <p class="about__text-description">Наша компания продает подшипники высокого качества и по разумной цене со склада и под заказ. У нас в наличии всегда несколько десятков тысяч импортных подшипников от разных производителей. Наш опыт продаж подшипников в России уже более 15 лет и мы очень многое знаем о подшипниках</p>
     </div>
 </section>
-		<section class="events">
+	<section class="events">
     <h2 class="events__title">События</h2>
     <div class="news">
     <a href="/" class="news__item">
@@ -194,8 +258,29 @@
     </a>
 </div>
 </section>
-	</main>
-	<footer class="footer">
+	<div class="menu">
+    <a href="/" class="menu__item">
+        <svg>
+            <use xlink:href="/img/sprite.svg#home"></use>
+        </svg>
+        Главная
+    </a>
+    <button class="menu__item">
+        <svg>
+            <use xlink:href="/img/sprite.svg#catalog"></use>
+        </svg>
+        Каталог
+    </button>
+    <a href="/" class="menu__item">
+        <svg>
+            <use xlink:href="/img/sprite.svg#brands"></use>
+        </svg>
+        Бренды
+    </a>
+</div>
+	<div class="overlay"></div>
+</main>
+<footer class="footer">
     <div class="container">
         <nav class="nav">
             <a href="/" class="nav__item">Бренды</a>
@@ -245,7 +330,7 @@
     </div>
 </footer>
 
-	<script src="js/libs.min.js"></script>
+<script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 

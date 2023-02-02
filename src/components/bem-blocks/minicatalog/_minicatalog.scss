@@ -4,6 +4,15 @@
   gap: 0;
   max-width: 282px;
   width: 100%;
+  position: relative;
+
+  @include media-sm{
+    display: none;
+  }
+
+  &.active{
+    z-index: 4;
+  }
 
   &__head{
     width: 100%;
@@ -13,6 +22,8 @@
     gap: 12px;
     box-sizing: border-box;
     padding: 15px 16px;
+    z-index: 1;
+    cursor: pointer;
 
     &-icon{
       width: 24px;
@@ -32,20 +43,76 @@
   &__list{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
     box-sizing: border-box;
-    padding: 16px 20px;
+    padding: 10px 10px 0;
     background: #F9F9F9;
+    position: relative;
+    z-index: 1;
 
     &-item{
       font-size: 15px;
       line-height: 18px;
       color: #110E0E;
-      padding: 4px 0;
+      padding: 11px 10px;
 
       &:hover{
+        background: $neutral5;
+      }
+    }
+  }
+
+  &__hidden{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 10px 16px;
+    background: #F9F9F9;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    transition: 0.3s;
+
+    &-open{
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      svg{
+        width: 24px;
+        height: 24px;
+        fill: $primary40;
+        transition: 0.2s;
+      }
+
+      span{
         color: $primary40;
+        font-size: 16px;
+        font-weight: 500;
+        transition: 0.2s;
+      }
+
+      .second{
+        display: none;
+      }
+    }
+
+    &.active{
+      top: calc(100% - 56px);
+
+      svg{
+        transform: rotate(180deg);
+      }
+
+      .first{
+        display: none;
+      }
+
+      .second{
+        display: block;
       }
     }
   }

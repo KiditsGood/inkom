@@ -13,6 +13,11 @@
     &-image{
       width: 100%;
       max-width: 1158px;
+
+      @include media-sm{
+        min-height: 480px;
+        object-fit: cover;
+      }
     }
   }
 }

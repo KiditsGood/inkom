@@ -4,6 +4,10 @@
   box-sizing: border-box;
   padding: 21px 0;
 
+  @include media-sm{
+    padding: 21px 0 92px;
+  }
+
   & .container{
     display: flex;
     align-items: center;
@@ -12,10 +16,26 @@
     max-width: 1440px;
     margin: 0 auto;
 
+    @include media-xxl{
+      max-width: calc(100% - 40px);
+      flex-wrap: wrap;
+    }
+
+    @include media-sm{
+      padding: 0 16px;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+
     .nav{
       display: flex;
       align-items: center;
       gap: 26px;
+
+      @include media-sm{
+        flex-wrap: wrap;
+        gap: 16px;
+      }
 
       &__item{
         font-size: 15px;
@@ -38,6 +58,12 @@
         gap: 8px;
         font-size: 16px;
         line-height: 19px;
+
+        @include media-sm{
+          font-size: 15px;
+          line-height: 18px;
+          white-space: nowrap;
+        }
 
         &:hover{
           color: $primary40;

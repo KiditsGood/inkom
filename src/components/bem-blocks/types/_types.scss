@@ -4,6 +4,11 @@
   flex-wrap: wrap;
   gap: 24px;
 
+  @include media-sm{
+    gap: 16px;
+    justify-content: center;
+  }
+
   &__item{
     display: flex;
     flex-direction: column;
@@ -12,6 +17,10 @@
     max-width: 220px;
     width: 100%;
     text-align: center;
+
+    @include media-sm{
+      max-width: 156px;
+    }
 
     &-image{
       width: 112px;

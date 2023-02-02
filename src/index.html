@@ -8,15 +8,17 @@
 })
 
 <body>
-	@@include('components/header/_header.html')
-	<main class="wrapper">
-		@@include('components/sections/main/_main.html')
-		@@include('components/sections/bearings/_bearings.html')
-		@@include('components/sections/about/_about.html')
-		@@include('components/sections/events/_events.html')
-	</main>
-	@@include('components/footer/_footer.html')
-	@@include('components/bodyscripts/_scripts.html')
+@@include('components/header/_header.html')
+<main class="wrapper">
+	@@include('components/sections/main/_main.html')
+	@@include('components/sections/bearings/_bearings.html')
+	@@include('components/sections/about/_about.html')
+	@@include('components/sections/events/_events.html')
+	@@include('components/bem-blocks/menu/_menu.html')
+	<div class="overlay"></div>
+</main>
+@@include('components/footer/_footer.html')
+@@include('components/bodyscripts/_scripts.html')
 </body>
 
 </html>
