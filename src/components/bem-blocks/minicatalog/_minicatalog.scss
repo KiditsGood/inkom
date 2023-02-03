@@ -7,11 +7,39 @@
   position: relative;
 
   @include media-sm{
-    display: none;
+    position: fixed;
+    top: 67px;
+    left: -100%;
+    width: 100%;
+    height: calc(100% - 138px);
+    overflow-y: scroll;
+    z-index: 1;
+    max-width: unset;
+    transition: 0.3s;
+
+    &.active{
+      left: 0;
+    }
   }
 
-  &.active{
-    z-index: 4;
+  &__back{
+    display: none;
+    align-self: flex-start;
+    margin-bottom: 15px;
+    margin-left: 5px;
+
+    @include media-sm{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg{
+      @include media-sm{
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 
   &__head{
@@ -24,6 +52,10 @@
     padding: 15px 16px;
     z-index: 1;
     cursor: pointer;
+
+    @include media-sm{
+      display: none;
+    }
 
     &-icon{
       width: 24px;
@@ -74,12 +106,24 @@
     z-index: 0;
     transition: 0.3s;
 
+    @include media-xxl{
+      top: 0;
+    }
+
+    @include media-sm{
+      position: unset;
+    }
+
     &-open{
       margin-top: 15px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
+
+      @include media-sm{
+        display: none;
+      }
 
       svg{
         width: 24px;
@@ -102,6 +146,10 @@
 
     &.active{
       top: calc(100% - 56px);
+
+      @include media-xxl{
+        top: 100%;
+      }
 
       svg{
         transform: rotate(180deg);

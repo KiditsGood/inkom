@@ -7,9 +7,13 @@
   left: 0;
   bottom: 0;
   position: fixed;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
+
+  @include media-sm{
+    display: flex;
+  }
 
   &__item{
     display: flex;
@@ -22,6 +26,7 @@
 
     &.active{
       color: $neutral80;
+      font-weight: 700;
 
       svg{
         stroke: $neutral80;
