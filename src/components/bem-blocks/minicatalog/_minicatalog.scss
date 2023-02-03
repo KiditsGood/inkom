@@ -5,6 +5,7 @@
   max-width: 282px;
   width: 100%;
   position: relative;
+  z-index: 3;
 
   @include media-sm{
     position: fixed;
@@ -81,13 +82,43 @@
     position: relative;
     z-index: 1;
 
+    &-right{
+      position: relative;
+      z-index: -3;
+      max-height: 40px;
+
+      @include media-sm{
+        z-index: 100;
+      }
+    }
+
     &-item{
       font-size: 15px;
       line-height: 18px;
       color: #110E0E;
       padding: 11px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      box-sizing: border-box;
+      background: #F9F9F9;
+
+      svg{
+        width: 24px;
+        height: 24px;
+        transform: rotate(90deg);
+
+        @include media-sm{
+          transform: rotate(180deg );
+        }
+      }
 
       &:hover{
+        background: $neutral5;
+      }
+
+      &.active{
         background: $neutral5;
       }
     }
@@ -103,7 +134,7 @@
     top: 65px;
     left: 0;
     width: 100%;
-    z-index: 0;
+    z-index: -1;
     transition: 0.3s;
 
     @include media-xxl{
@@ -146,6 +177,7 @@
 
     &.active{
       top: calc(100% - 56px);
+      box-shadow: rgba(0, 0, 0, 0.24) 5px 3px 8px;
 
       @include media-xxl{
         top: 100%;
@@ -161,6 +193,49 @@
 
       .second{
         display: block;
+      }
+    }
+  }
+
+  .prefix{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: #F9F9F9;
+    padding: 8px;
+    top: 0;
+    left: -10px;
+    width: 100%;
+    z-index: -2;
+    transition: 0.3s;
+
+    @include media-sm{
+      border-left: none;
+      position: fixed;
+      top: 67px;
+      z-index: 100;
+      left: -150vw;
+      height: 100vh;
+    }
+
+    &.active{
+      left: calc(100% + 10px);
+      border-left: 1px solid $neutral30;
+
+      @include media-sm{
+        border-left: none;
+        position: fixed;
+        top: 67px;
+        left: 0;
+      }
+    }
+
+    & .sub__list-item{
+      z-index: -5;
+
+      @include media-sm{
+        z-index: 100;
       }
     }
   }
