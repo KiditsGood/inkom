@@ -25,6 +25,10 @@
 
     @include media-sm{
       max-width: 156px;
+
+      &:last-child{
+        display: none;
+      }
     }
 
     &-image{

@@ -15,6 +15,9 @@
 @import "./src/components/sections/bearings/bearings";
 @import "./src/components/sections/about/about";
 @import "./src/components/sections/events/events";
+@import "./src/components/crumbs/crumbs";
+@import "./src/components/sections/card/card";
+@import "./src/components/sections/tabs/tabs";
 
 //Bem-blocks
 
@@ -25,3 +28,6 @@
 @import "./src/components/bem-blocks/intrid/intrid";
 @import "./src/components/bem-blocks/burger/burger";
 @import "./src/components/bem-blocks/menu/menu";
+@import "./src/components/bem-blocks/photo/photo";
+@import "./src/components/bem-blocks/productInfo/info";
+@import "./src/components/bem-blocks/productBuy/product-buy";

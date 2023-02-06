@@ -1,4 +1,4 @@
-const plugins = [];
+const plugins = ['libs/swiper/swiper.js'];
 const {
 	src,
 	dest

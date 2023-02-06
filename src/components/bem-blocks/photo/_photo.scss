@@ -1,0 +1,41 @@
+.photo{
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &__left{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+
+    &-slider{
+      max-width: 89px;
+      height: 400px;
+
+      &_item{
+        width: 89px;
+        height: 72px;
+        object-fit: contain;
+        cursor: pointer;
+      }
+    }
+
+    &-nav{
+      width: 24px;
+      height: 24px;
+
+      svg{
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__right{
+    width: 404px;
+    height: 388px;
+  }
+}

@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "jquery": "^3.6.3",
-    "sass": "^1.56.0"
+    "sass": "^1.56.0",
+    "swiper": "^9.0.2"
   }
 }

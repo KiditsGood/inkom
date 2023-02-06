@@ -1,0 +1,12 @@
+.card{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .sub{
+    display: none;
+  }
+}

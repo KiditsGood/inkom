@@ -10,13 +10,54 @@
     align-items: stretch;
     gap: 0;
 
+    &-title{
+      color: white;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     &-image{
       width: 100%;
       max-width: 1158px;
+      object-fit: cover;
+      height: calc(100% - 5px);
 
       @include media-sm{
         min-height: 480px;
         object-fit: cover;
+      }
+    }
+
+    &-nav{
+      position: absolute;
+      top: 45%;
+      z-index: 2;
+
+      &.prev{
+        left: 5px;
+      }
+
+      &.next{
+        right: 5px;
+      }
+
+      svg{
+        width: 44px;
+        height: 44px;
+        fill: white;
+        transition: 0.2s;
+
+        &:hover{
+          fill: $primary60;
+        }
       }
     }
   }

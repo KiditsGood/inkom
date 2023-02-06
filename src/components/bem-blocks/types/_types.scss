@@ -28,6 +28,11 @@
       object-fit: contain;
       border: 1px solid $neutral20;
       border-radius: 100%;
+      transition: 0.2s;
+    }
+
+    &:hover > &-image{
+      transform: scale(1.3);
     }
   }
 }

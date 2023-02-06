@@ -1,0 +1,37 @@
+.product-buy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 258px;
+  box-sizing: border-box;
+  padding: 24px 52px;
+
+  &__price{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+
+  &__status{
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 28px;
+    position: relative;
+    color: $success50;
+
+    &:before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url("../img/check.svg") no-repeat center/contain;
+      left: 0;
+      top: -1px;
+    }
+  }
+
+  &__order{
+    width: 100%;
+  }
+}
