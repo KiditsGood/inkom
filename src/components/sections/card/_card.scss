@@ -5,8 +5,39 @@
   gap: 10px;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+
+  @include media-xxl{
+    max-width: calc(100% - 40px);
+  }
+
+  @include media-sm{
+    max-width: calc(100% - 32px);
+    flex-wrap: wrap;
+    gap: 24px;
+  }
 
   .sub{
     display: none;
+
+    @include media-sm{
+      display: block;
+      z-index: 2;
+    }
+  }
+
+  &__share{
+    position: absolute;
+    right: 0;
+    top: -40px;
+
+    @include media-sm{
+      right: 0;
+    }
+
+    svg{
+      width: 24px;
+      height: 24px;
+    }
   }
 }

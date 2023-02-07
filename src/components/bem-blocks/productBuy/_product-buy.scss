@@ -7,10 +7,31 @@
   box-sizing: border-box;
   padding: 24px 52px;
 
+  @include media-xxl{
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    flex-direction: row;
+    width: unset;
+    padding: 0;
+  }
+
+  @include media-sm{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    width: unset;
+    justify-content: space-between;
+  }
+
   &__price{
     font-size: 32px;
     font-weight: 700;
     line-height: 38px;
+
+    @include media-xxl{
+      white-space: nowrap;
+    }
   }
 
   &__status{
@@ -19,6 +40,10 @@
     padding-left: 28px;
     position: relative;
     color: $success50;
+
+    @include media-xxl{
+      white-space: nowrap;
+    }
 
     &:before{
       content: '';

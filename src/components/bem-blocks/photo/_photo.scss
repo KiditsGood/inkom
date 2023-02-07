@@ -2,14 +2,20 @@
   display: flex;
   align-items: center;
   gap: 23px;
-  max-width: 1440px;
-  margin: 0 auto;
+
+  @include media-sm{
+    margin: 0 auto;
+  }
 
   &__left{
     display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: center;
+
+    @include media-sm{
+      display: none;
+    }
 
     &-slider{
       max-width: 89px;
@@ -37,5 +43,21 @@
   &__right{
     width: 404px;
     height: 388px;
+
+    @include media-sm{
+      width: 100%;
+      max-width: 500px;
+      max-height: 300px;
+      object-fit: contain;
+    }
+
+    &-slider{
+      &_item{
+        width: 100%;
+        max-width: 500px;
+        max-height: 300px;
+        object-fit: contain;
+      }
+    }
   }
 }

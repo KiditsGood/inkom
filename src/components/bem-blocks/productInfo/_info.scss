@@ -4,6 +4,11 @@
   flex-direction: column;
   gap: 32px;
 
+  @include media-sm{
+    max-width: unset;
+    gap: 24px;
+  }
+
   &__top{
     display: flex;
     flex-direction: column;
@@ -29,6 +34,11 @@
       display: flex;
       align-items: center;
       gap: 24px;
+
+      @include media-sm{
+        gap: 15px;
+        align-items: flex-start;
+      }
 
       &-name{
         font-size: 16px;
