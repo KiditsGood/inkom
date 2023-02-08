@@ -11,6 +11,15 @@ const photoLeftSlider = new Swiper('.photo__left-slider', {
     }
 })
 
+if (window.innerWidth < 1000) {
+    const photoMainSlider = new Swiper('.photo__right-slider', {
+        navigation: {
+            prevEl: '.photo__right-slider_nav.prev',
+            nextEl: '.photo__right-slider_nav.next'
+        }
+    })
+}
+
 function photoChanger(currPhoto) {
     bigPhoto.src = currPhoto.src
 }
